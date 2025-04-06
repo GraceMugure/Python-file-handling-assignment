@@ -1,0 +1,35 @@
+-- Select a database
+-- USE sampledb;
+
+-- Count Aggregate Function
+-- SELECT COUNT( *) FROM customers WHERE country = 'USA';
+
+-- SUM AGGREGATE FUNCTION
+-- SELECT SUM(creditLimit) FROM customers;
+
+-- MAX AGGREGATE FUNCTION
+-- SELECT MAX(creditLimit) FROM customers;
+
+-- MIN AGGREGATE FUNCTION
+-- SELECT MIN(creditLimit) FROM customers;
+
+-- AVG AGGREGATE FUNCTION
+-- SELECT AVG(creditLimit) FROM customers;
+
+-- GROUP BY clause COUNT
+-- SELECT country, COUNT(*) FROM customers GROUP BY country;
+
+-- GROUP BY clause Example with SUM
+-- SELECT country, SUM(creditLimit) FROM customers GROUP BY country;
+
+-- HAVING CLAUSE Example with COUNT
+-- SELECT country, COUNT(*)
+-- FROM customers 
+-- GROUP BY country
+-- HAVING COUNT(*) > 10;
+
+-- HAVING CLAUSE Example with SUM
+SELECT country, SUM(creditLimit)
+FROM customers
+GROUP BY country
+HAVING SUM(creditLimit) > 1000000;
